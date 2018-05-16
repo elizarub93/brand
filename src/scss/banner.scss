@@ -1,0 +1,32 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.banner{
+	background: #e8e8e8 url('img/main-banner.png') center center no-repeat;
+	background-size: cover;
+	height: 665px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+	&__content{
+		width: 100%;
+		border-left: 12px solid $color-red;
+		padding-left: 10px;
+	}
+	&__header{
+		font-size: 60px;
+		font-weight: 900;
+		padding-bottom: 15px;
+		line-height: 43px;
+	}
+	&__subheader{
+		font-size: 40px;
+		font-weight: 900;
+		line-height: 30px;
+
+	}
+	&__redsubheader{
+		color: $color-red;
+
+	}
+}

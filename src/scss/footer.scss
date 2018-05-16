@@ -1,0 +1,68 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.footer{
+	display: flex;	
+	justify-content: space-between;	
+
+	&__company{
+		width: 40%;	
+		padding-right: 60px;
+		box-sizing: border-box;
+	}
+	&__logo{
+		margin-bottom: 15px;
+	}
+	&__text{
+		p{
+			font-size: 14px;
+			font-weight: 300;
+			margin-bottom: 30px;
+			color: $footer-text-color;
+			line-height: 1.8;
+		}
+
+	}
+
+	&__menu{
+		display: flex;
+		width: 60%;
+	}
+
+	&__item{
+		width: 33.33%;
+		padding-right: 15px;
+		box-sixing: border-box;
+	}
+
+	&__header{
+		font-size: 18px;
+		font-weight: 700;
+		color: $color-red;
+		margin-bottom: 45px;
+	}
+
+	&__nav{
+
+		& .nav__menu{
+			@include clear-list;
+			display: flex;
+			flex-direction: column;
+		}
+
+		& .nav__fitem{
+			padding-bottom: 25px;
+		}
+
+		& .nav__flink{
+			font-size: 16px;
+			color: $footer-text-color;
+			&:hover{
+				text-decoration: underline;
+			}
+
+		}
+
+	}
+
+}

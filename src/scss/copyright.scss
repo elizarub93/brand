@@ -1,0 +1,39 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.copyright{
+	background-color: $color-graylight;
+
+	&__content{
+		padding: 25px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__text{
+		font-size: 16px;
+		color: #7a7a7a;
+	}
+
+	&__social{
+		display: flex;
+		@include clear-list;
+		& .social__item{
+			padding-left: 7px;
+		}
+		& .social__link{
+			width: 32px;
+			height: 32px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #fff;
+			color: #b2b2b2;
+			&:hover{
+				background: $color-red;
+				color: #fff;
+			}
+		}
+	}
+}

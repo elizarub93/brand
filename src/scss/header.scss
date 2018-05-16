@@ -1,0 +1,152 @@
+@import "partials/params";
+@import "partials/mixins";
+
+$border-radius: 4px;
+$button-color: #f8f8f8;
+
+.header{
+	border-bottom: 1px solid lighten($color-gray, 24%);
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 0;
+
+	}
+
+	&__left{
+		display: flex;
+		align-items: center;
+	}
+	&__logo{
+
+	}
+	&__search{
+		display: flex;
+		margin-left: 30px;
+		position: relative;
+		.search__button{
+			height: 37px;
+			border: 1px solid $color-graylight;
+			background: $button-color;
+			border-radius: $border-radius 0 0 $border-radius;
+			font-weight: 300;
+			font-size: 14px;
+			padding: 0 10px;
+			cursor: pointer;
+
+			.button__icon{
+				color: lighten($color-font, 45%);
+				padding-left: 5px;
+			}
+
+		}
+		.search__input{
+			border: 1px solid $color-graylight;
+			border-left: 0;
+			border-right: 0;
+			padding: 0 15px;
+			font-size: 14px;
+			font-weight: 300;
+			color: $color-graylight;
+		}
+		.search__search{
+			background: #fff;
+			border: 1px solid $color-graylight;
+			border-radius: 0 $border-radius $border-radius 0;
+			cursor: pointer;
+			padding: 0 11px;
+			.search__icon{
+				color: lighten($color-font, 45%);
+			}
+
+		}
+		.search__menu{
+			display: none;
+			position: absolute;
+			top: 37px;
+			left: 0;
+			background: #fff;
+			border: 1px solid $color-graylight;
+			border-radius: 5px;
+			width: 250px;
+			padding: 10px;
+			z-index: 100;
+			&.active{
+				display: block;
+			}
+		}
+		.search__header{
+			font-size: 14px;
+			text-transform: uppercase;
+			padding: 7px 0;
+			border-bottom: 1px solid $color-graylight;
+		}
+		.search__items{
+			@include clear-list;
+			margin-bottom: 15px;
+		}
+		.search__item{
+			padding: 7px 15px;
+			cursor: pointer;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+
+
+
+	}
+
+	&__right{
+		display: flex;
+		position: relative;
+	}
+	&__bucket{
+		font-size: 30px;
+		padding: 0 10px;
+		margin-right: 15px;
+		cursor: pointer;
+	}
+	&__account{
+		font-weight: 400;
+		font-size: 15px;
+		.account__icon{
+			padding-left: 5px;
+
+		}
+		
+	}
+	.account__dropdown{
+		@include clear-list;
+		width: 120px;
+		top: 35px;
+		right: 0;
+
+	}
+	.account__item{
+		padding: 7px;
+
+	}
+	.account__link{
+		font-size: 14px;
+		color: $color-font;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+
+}
+.dropdown{
+	display: none;
+	position: absolute;
+	background: #fff;
+	border: 1px solid $color-graylight;
+	border-radius: 5px;
+	padding: 10px;
+	box-sizing: border-box;
+	&.active{
+		display: block;
+	}
+}

@@ -1,0 +1,58 @@
+@import "partials/params";
+@import "partials/mixins";
+
+$bg-c: #222224;
+
+.offer{
+	display: flex;
+	height: 529px;
+	margin-bottom: 30px;
+	&__left{
+		width: 75%;
+		background: url('img/bottom-banner.png') no-repeat;
+		background-size: cover;
+	}
+	&__title{
+		margin-top: 135px;
+		margin-left: 30px;
+		font-size: 56px;
+		font-weight: 700;
+		color: #fff;
+		.header__red{
+			color: $color-red;
+		}
+	}
+	&__subtitle{
+		font-size: 33px;
+		font-weight: 700;
+		color: #fff;
+		margin-left: 30px;
+	}
+	&__right{
+		background-color: $bg-c;
+		width: 25%;
+		padding: 40px 30px 20px;
+	}
+	&__item{
+		display: flex;
+		margin-bottom: 40px;
+	}
+	&__img{
+		width: 200px;
+		padding-right: 20px;
+		text-align: center;
+	}
+	&__text{
+		h2{
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		p{
+			font-weight: 300;
+			font-size: 14px;
+			color: #fff;
+			line-height: 24px;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.logo{
+	display: flex;
+	align-items: center;
+	&__img{
+		margin-right: 10px;
+	}
+	&__text{
+		font-weight: 300;
+		font-size: 27px;
+		color: $color-font;
+	}
+	&__red{
+		font-weight: 700;
+		color: $color-red;
+	}
+}

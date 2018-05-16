@@ -1,0 +1,65 @@
+@import "partials/params";
+@import "partials/mixins";
+
+$border-color: #ebebeb;
+$cat-color: #6f6e6e;
+
+.category{
+	margin-bottom: 18px;
+
+	&__header{
+		font-size: 14px;
+		font-weight: 700;
+		color: $cat-color;
+		text-transform: uppercase;
+		display: block;
+		border-bottom: 1px solid $border-color;
+		padding: 10px 15px;
+		position: relative;
+		cursor: pointer;
+		&:before{
+			content: '';
+			display: inline-block;
+			background: $color-red;
+			width: 5px;
+			height: 37px;
+			position: absolute;
+			left: 0;
+			top: 1px;
+		}
+		&:after{
+			content: "\f0d7";
+			font: normal normal normal 14px/1 FontAwesome;
+			position: absolute;
+			right: 10px;
+			top: 11px;
+		}
+		&.active{
+			color: $color-red;
+			&:after{
+				content: "\f0d8";
+				font: normal normal normal 14px/1 FontAwesome;
+				position: absolute;
+				right: 10px;
+				top: 11px;
+			}
+		}
+	}
+
+	&__items{
+		display: none;
+		@include clear-list;
+		margin: 10px 0 15px;
+		&.active{
+			display: block;
+		}
+
+	}
+
+	&__item{
+		font-size: 14px;
+		color: $cat-color;
+		padding: 10px 15px;
+
+	}
+}

@@ -1,0 +1,58 @@
+@import "partials/params";
+@import "partials/mixins";
+$border-width: 3px;
+
+.nav{
+	display: flex;
+	justify-content: center;
+	&__menu{
+		@include clear-list;
+		display: flex;
+		justify-content: space-around;
+	}
+	&__item{
+		padding: 0 5px;
+		position: relative;
+		&:hover{
+			.nav__submenu{
+				display: block;
+			}
+		}
+	}
+	&__link{
+		padding: 15px;
+		display: block;
+		color: $color-font;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 700;
+		box-sizing: border-box;
+		border-bottom: $border-width solid transparent;
+		transition: border-bottom 0.7s ease-in-out;
+		&:hover{
+			border-bottom: $border-width solid $color-red;
+		}
+	}
+	&__submenu{
+		@include clear-list;
+		display: none;
+		position: absolute;
+		top: 49px;
+		left: 0;
+		width: 300px;
+		padding: 15px;
+		z-index: 100;
+	}
+
+	&__sitem{
+		padding: 7px 0;
+	}
+
+	&__slink{
+		color: #646464;
+		&:hover{
+			text-decoration: underline;	
+		}
+
+	}
+}

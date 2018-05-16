@@ -1,0 +1,116 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.subscribe{
+	background: url('img/body-bottom.png');
+	background-size: cover;
+	height: 438px;
+	margin-bottom: 100px;	
+	
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	&__review{
+		width: 50%;
+		.review__items{
+			.slick-dots{
+				display: flex;
+				margin-left: 70px;		
+				li{
+					@include clear-list;
+					width: 40px;	
+					height: 4px;	
+					background: #d6d6d6;
+					display: block;	
+					cursor: pointer;
+					margin-right: 10px;	
+					button{
+						display: none;	
+					}
+				}
+				.slick-active{
+					background: $color-red;
+				}
+			}
+		}
+
+		.review__item{
+			display: flex;
+			margin-bottom: 20px;	
+
+		}
+
+		.review__img{
+			margin-right: 25px;		
+			img{
+
+			}
+		}
+
+		.review__text{
+			
+		}
+		.review__review{
+			font-style: italic;	
+			font-weight: 300;
+			margin-bottom: 15px;
+			font-size: 16px;					
+		}
+		.review__name{
+			font-weight: 700;	
+			color: $color-red;
+			font-size: 16px;	
+
+		}
+		.review__city{
+			font-weight: 300;	
+			font-size: 12px;	
+		}
+	}
+	&__subscribe{
+		width: 50%;
+		display: flex;	
+		flex-direction: column;	
+		align-items: center;	
+		.subscribe__title{
+			font-size: 24px;
+			text-transform: uppercase;	
+			margin-bottom: 5px;	
+
+		}
+		.subscribe__subtitle{
+			font-size: 14px;	
+			margin-bottom: 20px;	
+		}
+		.subscribe__form{
+			display: flex;	
+
+		}
+		.subscribe__input{
+			border: 0;
+			height: 42px;	
+			line-height: 42px;
+			padding: 0 15px 0 30px;	
+			border-radius: 22px 0 0 22px;
+			background: #e1e1e1;
+		}
+		.subscribe__button{
+			height: 42px;	
+			background: $color-red;
+			line-height: 42px;	
+			color: #fff;	
+			text-align: center;	
+			border: 0;
+			border-radius: 0 22px 22px 0;
+			padding: 0 20px;	
+			cursor: pointer;	
+		}
+
+	}
+
+
+}
